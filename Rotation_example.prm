@@ -35,7 +35,7 @@ end
 
 #### Parameters describing the model
 
-# Model geometry (400x100 km, 2 km spacing)
+# Model geometry (800x800 km, 100 km spacing)
 subsection Geometry model
   set Model name = box
   subsection Box
