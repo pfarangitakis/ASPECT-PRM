@@ -1,3 +1,6 @@
+# This is an example parameter file of a "sampling box" model mentioned in the EPSL manuscript.
+# The output at 5 My is used as an input to the MatLab script.
+
 #### Continental Extension Cookbook
 # This cookbook is based off numerous published studies, three of which are listed below.
 # For additional information, see these publications and references therein.
