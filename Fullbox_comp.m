@@ -1,6 +1,8 @@
+%%% THIS IS AN EXAMPLE SCRIPT OF HOW THE ROTATION IS APPLIED IN A SAMPLE OF AN ORTHOGONAL MODEL
+
 clear all
 close all
-% SORT PARAVIEW EXPORT IN THE SAME MANNER AS A .PRM FILE
+% RESHAPE PARAVIEW EXPORT IN THE SAME MANNER AS A .PRM FILE
 m=csvread('fullriftbox.csv',1,0); % Read paraview output and remove header
 n=m(1:end,[7 8 9 2 3 4 5 6]); % Get X Y Z Eii Upper Lower Mantle Seed
 uniqueb=unique(n,'rows'); % Get unique values
@@ -22,10 +24,10 @@ for j=1:k
 % Get one layer of the unique matrix.
 % Height of same z layer. In this case this is calculated by dividing the
 % total size of the unique value matrix by the number of z layers that are
-% in the model. This requires the model to be a box.
+% in the model. This requires the model to be a regular x,y,z box.
 hgt=size(sorted,1)/k; 
 layer=sorted(((j-1)*hgt)+1:j*hgt,[1 2 4 5 6 7 8]);
-% Sort everything in a specific array to make the meshgrid afterwards
+% Reshape inputs in a specific array to make the meshgrid afterwards
 dim=sqrt(hgt);
 x=unique(layer(:,1));
 x=x';
@@ -108,11 +110,11 @@ finalSeed=interp2(X,Y,bigSeed,Xqrs,Yqrs,'spline');
 % Put Xfin,Yfin,Zfin,Tfin into columns
 Xfin=reshape(Xq',[],1);
 Yfin=reshape(Yq',[],1);
-Eiifin=reshape(finalEii,[],1); %I HAVE CHANGED THE TRANSPOSE ON THIS
-Upperfin=reshape(finalUpper,[],1); %I HAVE CHANGED THE TRANSPOSE ON THIS
-Lowerfin=reshape(finalLower,[],1); %I HAVE CHANGED THE TRANSPOSE ON THIS
-Mantlefin=reshape(finalMantle,[],1); %I HAVE CHANGED THE TRANSPOSE ON THIS
-Seedfin=reshape(finalSeed,[],1); %I HAVE CHANGED THE TRANSPOSE ON THIS
+Eiifin=reshape(finalEii,[],1); 
+Upperfin=reshape(finalUpper,[],1); 
+Lowerfin=reshape(finalLower,[],1); 
+Mantlefin=reshape(finalMantle,[],1); 
+Seedfin=reshape(finalSeed,[],1); 
 Zfin=Zi*ones(size(Eiifin));
 % % Plot final grid
 % figure
