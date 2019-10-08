@@ -1,4 +1,6 @@
-%%% THIS IS AN EXAMPLE SCRIPT OF HOW THE ROTATION IS APPLIED IN A SAMPLE OF AN ORTHOGONAL MODEL
+%%% This is an example script of how rotation is applied to an orthogonal model in the submitted manuscript to EPSL titled 
+%%% "The impact of oblique inheritance and changes in relative plate motion on continent-ocean transform margins"
+%%% By Farangitakis et al. 
 
 clear all
 close all
