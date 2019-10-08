@@ -1,5 +1,7 @@
-# This is an example parameter file of a "sampling box" model mentioned in the EPSL manuscript.
-# The output at 5 My is used as an input to the MatLab script.
+#### This is an example parameter file of a "sampling box" model from the the submitted manuscript to EPSL titled 
+#### "The impact of oblique inheritance and changes in relative plate motion on continent-ocean transform margins"
+#### By Farangitakis et al. 
+#### The output at 5 My is used as an input to the MatLab script.
 
 #### Continental Extension Cookbook
 # This cookbook is based off numerous published studies, three of which are listed below.
